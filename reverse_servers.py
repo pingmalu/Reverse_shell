@@ -125,7 +125,7 @@ class ReverseShellServer:
 
     def menu_input(self):
         while True:
-            cmd = raw_input("")
+            cmd = input("")
             if cmd == '!ch':                    #切换肉机指令
                 self.select_client()
                 command = self.conn.send("\n")
