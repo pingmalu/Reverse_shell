@@ -131,7 +131,7 @@ class ReverseShellServer:
                 command = self.conn.send("\n")
                 return
             cmd += "\n"
-            command = self.conn.send(cmd)
+            command = self.conn.send(cmd.encode())
 
 
 def main(args):
