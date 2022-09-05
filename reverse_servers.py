@@ -93,10 +93,10 @@ class ReverseShellServer:
     
         while True:
             try:
-                num = input('Client num (Default [0]):')      #等待输入一个待选择地址的序号
+                num = int(input('Client num (Default [0]):'))      #等待输入一个待选择地址的序号
             except:
                 num = 0
-            if int(num) >= len(clientList):
+            if num >= len(clientList):
                 print('Please input a correct num!')
                 continue
             else:
