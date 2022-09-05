@@ -120,7 +120,7 @@ class ReverseShellServer:
                 msg
                 data = None
             if data:
-                sys.stdout.write(data)    #无缓冲输出
+                sys.stdout.write(data.decode('utf-8'))    #无缓冲输出
                 sys.stdout.flush()
 
     def menu_input(self):
